@@ -1,29 +1,42 @@
-let car = {
-  color: "red",
-  maxSpeed: "300",
-  audio: {
-    brand: "sony",
-    speakers: 12,
-  },
-};
+document.getElementById("title");
+console.log(document.getElementById("title"));
+console.log(typeof document.getElementById("title"));
+document.getElementById("title").innerText = "ghbdtn";
+// class Hater {
+//   constructor(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+//   sayName() {
+//     console.log(`${this.firstName} ${this.lastName}`);
+//   }
+// }
+// let hater1 = new Hater("norman", "osborn");
+// hater1.sayName();
+// let hater2 = new Hater("norma", "osborn");
+// hater2.sayName();
+// let hater3 = new Hater("nor", "osborn");
+// hater3.sayName();
+// let drivers = ["ivan", "andrew", "olha", "anna"];
 
-console.log(car.color);
+// for (let i = 0; i < drivers.length; i++) {
+//   console.log(drivers[i]);
+// }
+// let car = {
+//   color: "red",
+//   maxSpeed: "300",
+//   audio: {
+//     brand: "sony",
+//     speakers: 12,
+//   },
+//   update: speedChange,
+// };
 
-car.color = "green";
-console.log(car.color);
+// car.update();
 
-colorReset();
-maxSpeedReset();
-
-function colorReset() {
-  car.color = "blue";
-  console.log(car.color);
-}
-
-function maxSpeedReset() {
-  car.maxSpeed = "150";
-  console.log(car.maxSpeed);
-}
+// function speedChange() {
+//   console.log(car.maxSpeed);
+// }
 
 // let color = !car.color == "red" ? "red" : "fuck";
 // console.log(color);
