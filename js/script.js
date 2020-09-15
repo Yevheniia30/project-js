@@ -1,7 +1,10 @@
+"use strict";
+// дальше идет весь код файла
+
 document.getElementById("title");
 console.log(document.getElementById("title"));
-console.log(typeof document.getElementById("title"));
-document.getElementById("title").innerText = "ghbdtn";
+// console.log(typeof document.getElementById("title"));
+
 // class Hater {
 //   constructor(firstName, lastName) {
 //     this.firstName = firstName;
