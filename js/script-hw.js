@@ -1,13 +1,31 @@
 "use strict";
 // дальше идет весь код файла
+
+console.log(Boolean(0));
+// const age = 25;
+
+// const firstMessage = `${name}'m ${age} years old`;
+// console.log(firstMessage);
+
+// const amount = 5;
+// const order = `вы заказываете ${amount * 2} холодильников`;
+// console.log(order);
+
+// let brand = "samSUNG";
+// console.log(brand);
+// console.log(brand.slice(3).toLowerCase());
+
+// brand = brand[0].toUpperCase() + brand.slice(1).toLowerCase();
+// console.log(brand);
+
 // console.log(Math.PI);
 
-console.log(Math.random());
+// console.log(Math.random());
 
 // Math.random() * (max - min) + min;
-const min = 30;
-const max = 50;
-console.log(Math.round(Math.random() * (max - min) + min));
+// const min = 30;
+// const max = 50;
+// console.log(Math.round(Math.random() * (max - min) + min));
 
 // let base = prompt("enter number");
 // base = Number(base);
