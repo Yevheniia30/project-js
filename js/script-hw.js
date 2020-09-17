@@ -1,7 +1,63 @@
 "use strict";
 // дальше идет весь код файла
 
-console.log(Boolean(0));
+if (false) {
+  // body
+  // НЕ ВЫПОЛНЯЕТСЯ
+}
+if (true) {
+  // body
+  // ВЫПОЛНЯЕТСЯ
+}
+if (0) {
+  console.log("asd");
+}
+if (5) {
+  console.log("qwe");
+}
+
+if (5 > 30) {
+  console.log("omg");
+} else console.log("oops");
+//  проверяет до первого совпадения
+const salary = 1500;
+if (salary < 500) {
+  console.log("level 1");
+} else if (salary > 500 && salary < 1500) {
+  console.log("level 2");
+} else if (salary >= 1500 && salary < 3000) {
+  console.log("level 3");
+} else {
+  console("level 4");
+}
+const userPassword = "jqueryismyjam";
+
+const ADMIN_PASSWORD = "jqueryismyjam";
+
+const CANCELED_BY_USER = "Отменено пользователем!";
+const ACCESS_IS_ALLOWED = "Добро пожаловать!";
+const ACCESS_DENIED = "Доступ запрещен, неверный пароль!";
+let message;
+if (userPassword === "jqueryismyjam") {
+  message = ACCESS_IS_ALLOWED;
+} else if (userPassword === null) {
+  message = CANCELED_BY_USER;
+} else if (userPassword === "bla") {
+  message = ACCESS_DENIED;
+}
+console.log(message);
+// const sub = "free";
+
+// const canAccessContent = sub === "free";
+
+// console.log("is there access to content?", canAccessContent);
+// const isOnline = true;
+// const isFriend = true;
+// const isDnd = false;
+
+// const canOpenChat = isOnline && isFriend && !isDnd;
+// console.log("can to open chat? ", canOpenChat);
+// console.log(Boolean(0));
 // const age = 25;
 
 // const firstMessage = `${name}'m ${age} years old`;
