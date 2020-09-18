@@ -1,26 +1,75 @@
 "use strict";
-// дальше идет весь код файла
-const orderPieces = 4;
-const credits = 23580;
-const pricePerDroid = 3000;
-const CANCELED_BY_USER = "Отменено пользователем!";
-const ACCESS_DENIED = "Недостаточно средств на счету!";
-let totalPrice;
-let balanceCredit;
-let message;
-totalPrice = orderPieces * pricePerDroid;
-console.log(totalPrice);
-balanceCredit = credits - totalPrice;
-console.log(balanceCredit);
 
-if (orderPieces === 4) {
-  message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
-} else if (orderPieces === null) {
-  message = CANCELED_BY_USER;
-} else if (orderPieces === 10) {
-  message = ACCESS_DENIED;
+const option = 1;
+let message;
+// значение кейса - это значение переменной (может быть и строка)
+switch (option) {
+  case 1:
+    message = `you can take your goods tomorrow at 12 a.m. at our office`;
+    break;
+
+  case 2:
+    message = `the courier will deliver the order tomorrow from 9 a.m. till 6 p.m`;
+    break;
+
+  case 3:
+    message = `the parcel will be sent today`;
+    break;
+
+  default:
+    message = `the manager will call you`;
 }
+
 console.log(message);
+
+for (let i = 20; i >= 0; i -= 3) {
+  console.log(i);
+}
+// const stars = 6;
+// let price;
+
+// switch (stars) {
+//   case 1:
+//   case 2:
+//     price = 20;
+//     break;
+
+//   case 3:
+//   case 4:
+//     price = 50;
+//     break;
+
+//   case 5:
+//     price = 120;
+//     break;
+
+//   default:
+//     console.log(`undefined`);
+// }
+
+// console.log(`Стоимость проживания равна $${price} за одни сутки`);
+// дальше идет весь код файла
+// const orderPieces = 4;
+// const credits = 23580;
+// const pricePerDroid = 3000;
+// const CANCELED_BY_USER = "Отменено пользователем!";
+// const ACCESS_DENIED = "Недостаточно средств на счету!";
+// let totalPrice;
+// let balanceCredit;
+// let message;
+// totalPrice = orderPieces * pricePerDroid;
+// console.log(totalPrice);
+// balanceCredit = credits - totalPrice;
+// console.log(balanceCredit);
+
+// if (orderPieces === 4) {
+//   message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
+// } else if (orderPieces === null) {
+//   message = CANCELED_BY_USER;
+// } else if (orderPieces === 10) {
+//   message = ACCESS_DENIED;
+// }
+// console.log(message);
 // if (false) {
 //   // body
 //   // НЕ ВЫПОЛНЯЕТСЯ
