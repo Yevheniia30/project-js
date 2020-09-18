@@ -1,51 +1,72 @@
 "use strict";
 // дальше идет весь код файла
-
-if (false) {
-  // body
-  // НЕ ВЫПОЛНЯЕТСЯ
-}
-if (true) {
-  // body
-  // ВЫПОЛНЯЕТСЯ
-}
-if (0) {
-  console.log("asd");
-}
-if (5) {
-  console.log("qwe");
-}
-
-if (5 > 30) {
-  console.log("omg");
-} else console.log("oops");
-//  проверяет до первого совпадения
-const salary = 1500;
-if (salary < 500) {
-  console.log("level 1");
-} else if (salary > 500 && salary < 1500) {
-  console.log("level 2");
-} else if (salary >= 1500 && salary < 3000) {
-  console.log("level 3");
-} else {
-  console("level 4");
-}
-const userPassword = "jqueryismyjam";
-
-const ADMIN_PASSWORD = "jqueryismyjam";
-
+const orderPieces = 4;
+const credits = 23580;
+const pricePerDroid = 3000;
 const CANCELED_BY_USER = "Отменено пользователем!";
-const ACCESS_IS_ALLOWED = "Добро пожаловать!";
-const ACCESS_DENIED = "Доступ запрещен, неверный пароль!";
+const ACCESS_DENIED = "Недостаточно средств на счету!";
+let totalPrice;
+let balanceCredit;
 let message;
-if (userPassword === "jqueryismyjam") {
-  message = ACCESS_IS_ALLOWED;
-} else if (userPassword === null) {
+totalPrice = orderPieces * pricePerDroid;
+console.log(totalPrice);
+balanceCredit = credits - totalPrice;
+console.log(balanceCredit);
+
+if (orderPieces === 4) {
+  message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
+} else if (orderPieces === null) {
   message = CANCELED_BY_USER;
-} else if (userPassword === "bla") {
+} else if (orderPieces === 10) {
   message = ACCESS_DENIED;
 }
 console.log(message);
+// if (false) {
+//   // body
+//   // НЕ ВЫПОЛНЯЕТСЯ
+// }
+// if (true) {
+//   // body
+//   // ВЫПОЛНЯЕТСЯ
+// }
+// if (0) {
+//   console.log("asd");
+// }
+// if (5) {
+//   console.log("qwe");
+// }
+
+// if (5 > 30) {
+//   console.log("omg");
+// } else console.log("oops");
+// //  проверяет до первого совпадения
+// const salary = 1500;
+// if (salary < 500) {
+//   console.log("level 1");
+// } else if (salary > 500 && salary < 1500) {
+//   console.log("level 2");
+// } else if (salary >= 1500 && salary < 3000) {
+//   console.log("level 3");
+// } else {
+//   console("level 4");
+// }
+// const userPassword = "jqueryismyjam";
+
+// const ADMIN_PASSWORD = "jqueryismyjam";
+
+// const CANCELED_BY_USER = "Отменено пользователем!";
+// const ACCESS_IS_ALLOWED = "Добро пожаловать!";
+// const ACCESS_DENIED = "Доступ запрещен, неверный пароль!";
+// let message;
+// if (userPassword === "jqueryismyjam") {
+//   message = ACCESS_IS_ALLOWED;
+// } else if (userPassword === null) {
+//   message = CANCELED_BY_USER;
+// } else if (userPassword === "bla") {
+//   message = ACCESS_DENIED;
+// }
+// console.log(message);
+
 // const sub = "free";
 
 // const canAccessContent = sub === "free";
