@@ -1,30 +1,30 @@
 "use strict";
 
-const option = 1;
-let message;
-// значение кейса - это значение переменной (может быть и строка)
-switch (option) {
-  case 1:
-    message = `you can take your goods tomorrow at 12 a.m. at our office`;
-    break;
+// const option = 1;
+// let message;
+// // значение кейса - это значение переменной (может быть и строка)
+// switch (option) {
+//   case 1:
+//     message = `you can take your goods tomorrow at 12 a.m. at our office`;
+//     break;
 
-  case 2:
-    message = `the courier will deliver the order tomorrow from 9 a.m. till 6 p.m`;
-    break;
+//   case 2:
+//     message = `the courier will deliver the order tomorrow from 9 a.m. till 6 p.m`;
+//     break;
 
-  case 3:
-    message = `the parcel will be sent today`;
-    break;
+//   case 3:
+//     message = `the parcel will be sent today`;
+//     break;
 
-  default:
-    message = `the manager will call you`;
-}
+//   default:
+//     message = `the manager will call you`;
+// }
 
-console.log(message);
+// console.log(message);
 
-for (let i = 20; i > -20; i -= 3) {
-  console.log(i);
-}
+// for (let i = 20; i > -20; i -= 3) {
+//   console.log(i);
+// }
 // const stars = 6;
 // let price;
 
