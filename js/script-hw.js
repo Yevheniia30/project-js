@@ -22,7 +22,7 @@ switch (option) {
 
 console.log(message);
 
-for (let i = 20; i >= 0; i -= 3) {
+for (let i = 20; i > -20; i -= 3) {
   console.log(i);
 }
 // const stars = 6;
