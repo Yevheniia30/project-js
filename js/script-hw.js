@@ -1,6 +1,25 @@
 "use strict";
+// последний индекс - это длина минус 1, т.к. индексация идет с нуля
+const basket = [15, 38, 52, 428, 10, 25, 99];
+let total = 0;
+console.log(basket.length);
+// for используем, если нужен доступ с элементам, переопределение значения элумента
+for (let i = 0; i < basket.length; i += 1) {
+  console.log(basket[i]);
 
-// const option = 1;
+  if (basket[i] % 2 !== 0) {
+    console.log("even");
+    total += basket[i];
+  }
+}
+console.log(total);
+// for of используем когда доступ к єлементам не нужен(например нужно только общая сумма)
+// for (const value of basket) {
+//   total += value;
+// }
+// console.log(total);
+// Пустой массив
+// option = 1;
 // let message;
 // // значение кейса - это значение переменной (может быть и строка)
 // switch (option) {
