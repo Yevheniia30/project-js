@@ -1,20 +1,139 @@
 "use strict";
-// последний индекс - это длина минус 1, т.к. индексация идет с нуля
-const basket = [15, 38, 52, 428, 10, 25, 99];
-let total = 0;
-console.log(basket.length);
-// for используем, если нужен доступ с элементам, переопределение значения элумента
-for (let i = 0; i < basket.length; i += 1) {
-  console.log(basket[i]);
 
-  if (basket[i] % 2 !== 0) {
-    console.log("even");
-    total += basket[i];
-  }
-}
-console.log(total);
+// ПОЧИТАТЬ ДОКИ ВСЕХ МЕТОДОВ
+
+// метод splice
+
+const cards = ["card1", "card2", "card3", "card4", "card5"];
+
+const remove = "card3";
+const index = cards.indexOf(remove);
+console.log(index);
+
+cards.splice(index, 1);
+console.table(cards);
+
+const cardToInsert = "card6";
+cards.splice(0, 0, 235, 448, cardToInsert);
+console.table(cards);
+// скрипт который считает сумму элементов двух массивов(use concat)
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+
+// const arrays = array1.concat(array2);
+// for (const number of arrays) {
+//   total += number;
+// }
+// console.log(total);
+// console.log(arrays);
+
+// const title = "JavaScript Is Amazing";
+// const normalizedTtitle = title.toLowerCase();
+// console.log(normalizedTtitle);
+// console.log(normalizedTtitle);
+// const words = normalizedTtitle.split(" ");
+// console.log(words);
+
+// const wordsone = title.toLowerCase().split(" ").join("_");
+// console.log(wordsone);
+//скрипт который заменяет регистр каждого символа в строке (use split)
+
+// const string = "JavaScriPT";
+// const letters = string.split("");
+// let alterString = "";
+
+// console.log(letters);
+// for (const letter of letters) {
+// if (letter === letter.toLowerCase()) {
+// console.log(`єта буква в нижнем регистве - `, letter);
+//   alterString += letter.toUpperCase();
+// } else {
+//   alterString += letter.toLowerCase();
+// }
+// alterString +=
+//   letter === letter.toLowerCase()
+//     ? letter.toUpperCase()
+//     : letter.toLowerCase();
+
+// console.log(letter);
+// }
+// console.log(alterString);
+// скрипт который объединяет все элементы массива в одну строку(use for and join)
+// const friends = ["mango", "poly", "ajax", "kiwi"];
+// const string = friends.join(", ");
+// console.log(string);
+// let string = "";
+// for (const friend of friends) {
+//   string += friend + ", ";
+// }
+// string = string.slice(0, string.length - 2);
+// console.log(string);
+// console.log(string.length);
+// скрипт поиска самого маленького или самого большого числа в массиве
+// const numbers = [28, 15, 14, 105, 10, 147];
+// let biggestNumber = numbers[0];
+
+// console.log(smallestNumber);
+
+// for (const number of numbers) {
+// console.log(number);
+//   if (number > biggestNumber) {
+//     biggestNumber = number;
+//   }
+// }
+// console.log("biggest:", biggestNumber);
+// const logins = ["mango", "poly", "ajax", "alter"];
+// const loginToFind = "poly";
+// let message = `not found`;
+
+// const message = logins.includes(loginToFind) ? "welcome" : "not found";
+// console.log(message);
+// console.log(logins.includes(loginToFind));
+
+// for (const login of logins) {
+//   if (login === loginToFind) {
+//     message = `welcome`;
+//     break;
+//   }
+// }
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+//   if (login === loginToFind) {
+//     message = `welcome`;
+//     break;
+//   }
+
+// } else if (login !== loginToFind) {
+//   message = `login isn't found`;
+// }
+
+// console.log(message);
+// последний индекс - это длина минус 1, т.к. индексация идет с нуля
+// const basket = [15, 38, 52, 428, 10, 25, 99];
+// let total = 0;
+// console.log(basket.length);
+// for используем, если нужен доступ с элементам, переопределение значения элумента
+// for (let i = 0; i < basket.length; i += 1) {
+//   console.log(basket[i]);
+
+//   if (basket[i] % 2 === 0) {
+//     console.log(`${basket}-even`);
+//     total += basket[i];
+//   }
+// }
+// console.log(total);
 // for of используем когда доступ к єлементам не нужен(например нужно только общая сумма)
 // for (const value of basket) {
+//   if (value % 2 !== 0) {
+//     console.log(`пропускаем`, value);
+//     continue;
+//   }
+//   console.log(`${value} - even`);
+//   total += value;
+// }
+
+// console.log("total:", total);
 //   total += value;
 // }
 // console.log(total);
