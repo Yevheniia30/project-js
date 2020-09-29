@@ -1,21 +1,117 @@
 "use strict";
 
+const add = function () {
+  console.log("выполнение тела функции");
+};
+
+add();
+
+const getItemsString = function (array) {
+  let result = "";
+  for (let i = 0; i < array.length; i += 1) {
+    result += `${i + 1} - ${array[i]}\n`;
+  }
+  return result;
+};
+console.log(getItemsString(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]));
+
+const fn = function (value) {
+  //   if (value < 50) {
+  //     return "менше 50";
+  //   } else {
+  //     return "больше 50";
+  //   }
+  return 12213;
+};
+console.log(fn(10));
+console.log(fn(80));
+
+const fnA = function () {
+  console.log("выполняется функция А");
+};
+const fnB = function () {
+  console.log("выполняется функция В");
+};
+const fnC = function () {
+  console.log("выполняется функция С");
+};
+fnA();
+fnB();
+fnC();
+
 // ПОЧИТАТЬ ДОКИ ВСЕХ МЕТОДОВ
+
+// const withdraw = function (amount, balance) {
+//   if (amount === 0) {
+//     console.log("Для проведения операции введите сумму больше нуля.");
+//   } else if (amount > balance) {
+//     console.log("Недостаточно средств на счету.");
+//   } else {
+//     console.log("Операция снятия средств проведена.");
+//   }
+// };
+
+// withdraw(0, 300); // Для проведения операции введите сумму больше нуля.
+// withdraw(500, 300); // Недостаточно средств на счету.
+// withdraw(100, 300); // Операция снятия средств проведена.
+
+// const sum = function () {
+//   let total = 0;
+
+//   for (const argument of arguments) {
+//     total += argument;
+//   }
+
+//   return total;
+// };
+
+// console.log(sum(1, 2, 3)); //  6
+// console.log(sum(1, 2, 3, 4)); //  10
+// console.log(sum(1, 2, 3, 4, 5)); //  15
+
+// const fn = function (...args) {
+// В переменной args будет полноценный массив
+// };
+
+// a, b, c это параметры
+// const add = function (a, b, c) {
+//   return a + b + c;
+// };
+
+// // 1, 2, 3 это аргументы
+// const result = add(1, 2, 3);
+// console.log(result); // 6
+
+// // 5, 10, 15 это аргументы
+// console.log(add(5, 10, 15)); // 30
+
+// const count = function (countFrom = 0, countTo = 10, step = 1) {
+//   console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
+
+//   for (let i = countFrom; i <= countTo; i += step) {
+//     console.log(i);
+//   }
+// };
+
+// count(1, 5); // countFrom = 1, countTo = 5, step = 1
+// count(2); // countFrom = 2, countTo = 10, step = 1
+// count(undefined, 5, 2); // countFrom = 0, countTo = 5, step = 2
+// count(); // countFrom = 0, countTo = 10, step = 1
 
 // метод splice
 
-const cards = ["card1", "card2", "card3", "card4", "card5"];
+// const cards = ["card1", "card2", "card3", "card4", "card5"];
 
-const remove = "card3";
-const index = cards.indexOf(remove);
-console.log(index);
+// const remove = "card3";
+// const index = cards.indexOf(remove);
+// console.log(index);
 
-cards.splice(index, 1);
-console.table(cards);
+// cards.splice(index, 1);
+// console.table(cards);
 
-const cardToInsert = "card6";
-cards.splice(0, 0, 235, 448, cardToInsert);
-console.table(cards);
+// const cardToInsert = "card6";
+// cards.splice(0, 0, 235, 448, cardToInsert);
+// console.table(cards);
 // скрипт который считает сумму элементов двух массивов(use concat)
 // const array1 = [5, 10, 15, 20];
 // const array2 = [10, 20, 30];
