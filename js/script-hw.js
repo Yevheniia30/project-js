@@ -1,43 +1,127 @@
 "use strict";
+function checkForSpam(str) {
+  "use strict";
+  // создаем переменные для запрещенных слов
+  const bannedWord1 = "spam";
+  const bannedWord2 = "sale";
+  // const strNormalized = str.toLowerCase();
+  // используя оператор "или" и тернарник, проверим строку на содержание запрещенных слов и вернем соответствуещее сообщение (true или false)
+  // нормализируем строку toLowerCase
+  return str.toLowerCase().includes(bannedWord1) ||
+    str.toLowerCase().includes(bannedWord2)
+    ? `true`
+    : `false`;
+}
 
-const add = function () {
-  console.log("выполнение тела функции");
+console.log(checkForSpam("Latest technology news")); // false
+
+console.log(checkForSpam("JavaScript weekly newsletter")); // false
+
+console.log(checkForSpam("Get best sale offers now!")); // true
+
+console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+// напиши функцию Logins(logins, loginToFind) для поиска логина
+// если логина нет - сообщение "not found"
+// если логин найден - сообщение "welcome"
+// создаем переменную со списком логинов
+const logins = ["qwe", "asd", "zxc"];
+// РЕШЕНИЕ ЧЕРЕЗ FOR
+// пишем функцию с параметрами
+// const findLogin = function (allLogins, loginToFind) {
+//   for (const login of allLogins) {
+//     if (login === loginToFind) {
+//       return `user ${loginToFind} found`;
+//     }
+//   }
+//   return `user ${loginToFind} not found`;
+// };
+// РЕШЕНИЕ ЧЕРЕЗ ТЕРНаРНИК
+// const findLogin = function (allLogins, loginToFind) {
+//   const message = allLogins.includes(loginToFind)
+//     ? `user ${loginToFind} found`
+//     : `user ${loginToFind} not found`;
+//   return message;
+// };
+// РЕШЕНИЕ 2 ЧЕРЕЗ ТЕРНАРНИК БЕЗ ИСПОЛЬЗОВАНИЯ ПЕРЕМЕННОЙ
+const findLogin = function (allLogins, loginToFind) {
+  return allLogins.includes(loginToFind)
+    ? `user ${loginToFind} found`
+    : `user ${loginToFind} not found`;
 };
 
-add();
+// присваиваем парметрам аргументы и вызываем функцию
+console.log(findLogin(logins, "qwe"));
+console.log(findLogin(logins, "asdf"));
+console.log(findLogin(logins, "zxc"));
 
-const getItemsString = function (array) {
-  let result = "";
-  for (let i = 0; i < array.length; i += 1) {
-    result += `${i + 1} - ${array[i]}\n`;
+// напиши функцию logItems для перебора и логирования массива
+const logItems = function (items) {
+  //параметры
+  for (const item of items) {
+    console.log(item);
   }
-  return result;
 };
-console.log(getItemsString(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]));
 
-const fn = function (value) {
-  //   if (value < 50) {
-  //     return "менше 50";
-  //   } else {
-  //     return "больше 50";
-  //   }
-  return 12213;
-};
-console.log(fn(10));
-console.log(fn(80));
+logItems(["mango", "kiwi", "poly"]); //аргументы, они подставляются в параметрыб то есть в items
+logItems([1, 2, 3, 4, 5]);
+logItems(["clock", "pen", "chair"]);
 
-const fnA = function () {
-  console.log("выполняется функция А");
+// напиши функцию calculateTotalPrice котора я принимает массив чисел(items) и возвращает их сумму
+const calculateTotalPrice = function (items) {
+  console.log(items);
+  let total = 0;
+  for (const item of items) {
+    total += item;
+  }
+  return total;
 };
-const fnB = function () {
-  console.log("выполняется функция В");
-};
-const fnC = function () {
-  console.log("выполняется функция С");
-};
-fnA();
-fnB();
-fnC();
+// интерпретотор видит return и возвращает его значение на место calculateTotalPrice([])
+console.log(calculateTotalPrice([1, 2, 3])); //это вызов функции, в него происходит return
+console.log(calculateTotalPrice([5, 10, 20, 30]));
+console.log(calculateTotalPrice([100, 200, 300]));
+// const add = function () {
+//   console.log("выполнение тела функции");
+// };
+
+// add();
+
+// const getItemsString = function (array) {
+//   "use strict";
+//   // Write code under this line
+//   let result = "";
+//   for (let i = 0; i < array.length; i += 1) {
+//     result += `${i + 1} - ${array[i]}\n`;
+//   }
+//   return result;
+// };
+
+// console.log(getItemsString(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]));
+
+// const fn = function (value) {
+//   if (value < 50) {
+//     return "менше 50";
+//   } else {
+//     return "больше 50";
+//   }
+//   return 12213;
+// };
+// console.log(fn(10));
+// console.log(fn(80));
+
+// const fnA = function () {
+//   console.log("выполняется функция А");
+//   fnB();
+// };
+// const fnB = function () {
+//   console.log("выполняется функция В");
+//   console.log(value);
+// };
+// const fnC = function () {
+//   console.log("выполняется функция С");
+// };
+// fnA();
+// fnB();
+// fnC();
 
 // ПОЧИТАТЬ ДОКИ ВСЕХ МЕТОДОВ
 
