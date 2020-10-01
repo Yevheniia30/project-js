@@ -1,30 +1,44 @@
 "use strict";
-function checkForSpam(str) {
-  "use strict";
-  // создаем переменные для запрещенных слов
-  const bannedWord1 = "spam";
-  const bannedWord2 = "sale";
-  // const strNormalized = str.toLowerCase();
-  // используя оператор "или" и тернарник, проверим строку на содержание запрещенных слов и вернем соответствуещее сообщение (true или false)
-  // нормализируем строку toLowerCase
-  return str.toLowerCase().includes(bannedWord1) ||
-    str.toLowerCase().includes(bannedWord2)
-    ? `true`
-    : `false`;
-}
+// создаем массив из аргументов функции
+// олдскул метод
+// const fn = function () {
+//   console.log(arguments);
+//   const args = Array.from(arguments);
+//   console.log(args);
+// };
 
-console.log(checkForSpam("Latest technology news")); // false
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4);
+// fn(1, 2, 3, 4, 5);
 
-console.log(checkForSpam("JavaScript weekly newsletter")); // false
+// современный метод с помощью rest
+const fn = function (...args) {
+  console.log(args);
+};
 
-console.log(checkForSpam("Get best sale offers now!")); // true
+fn(1, 2, 3);
+fn(1, 2, 3, 4);
+fn(1, 2, 3, 4, 5);
 
-console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+// напиши функцию slugify(string) которая получает массив и возвращает URL-slug
+
+// const slugify = function (string) {
+//   return string.toLowerCase().split(" ").join("-");
+// };
+
+// console.log(slugify("The quick brown fox jumped over the lazy dog"));
+// // 'jumped'
+
+// console.log(slugify("Google do a roll"));
+// // 'Google'
+
+// console.log(slugify("May the force be with you"));
+
 // напиши функцию Logins(logins, loginToFind) для поиска логина
 // если логина нет - сообщение "not found"
 // если логин найден - сообщение "welcome"
 // создаем переменную со списком логинов
-const logins = ["qwe", "asd", "zxc"];
+// const logins = ["qwe", "asd", "zxc"];
 // РЕШЕНИЕ ЧЕРЕЗ FOR
 // пишем функцию с параметрами
 // const findLogin = function (allLogins, loginToFind) {
@@ -43,42 +57,42 @@ const logins = ["qwe", "asd", "zxc"];
 //   return message;
 // };
 // РЕШЕНИЕ 2 ЧЕРЕЗ ТЕРНАРНИК БЕЗ ИСПОЛЬЗОВАНИЯ ПЕРЕМЕННОЙ
-const findLogin = function (allLogins, loginToFind) {
-  return allLogins.includes(loginToFind)
-    ? `user ${loginToFind} found`
-    : `user ${loginToFind} not found`;
-};
+// const findLogin = function (allLogins, loginToFind) {
+//   return allLogins.includes(loginToFind)
+//     ? `user ${loginToFind} found`
+//     : `user ${loginToFind} not found`;
+// };
 
 // присваиваем парметрам аргументы и вызываем функцию
-console.log(findLogin(logins, "qwe"));
-console.log(findLogin(logins, "asdf"));
-console.log(findLogin(logins, "zxc"));
+// console.log(findLogin(logins, "qwe"));
+// console.log(findLogin(logins, "asdf"));
+// console.log(findLogin(logins, "zxc"));
 
-// напиши функцию logItems для перебора и логирования массива
-const logItems = function (items) {
-  //параметры
-  for (const item of items) {
-    console.log(item);
-  }
-};
+// // напиши функцию logItems для перебора и логирования массива
+// const logItems = function (items) {
+//   //параметры
+//   for (const item of items) {
+//     console.log(item);
+//   }
+// };
 
-logItems(["mango", "kiwi", "poly"]); //аргументы, они подставляются в параметрыб то есть в items
-logItems([1, 2, 3, 4, 5]);
-logItems(["clock", "pen", "chair"]);
+// logItems(["mango", "kiwi", "poly"]); //аргументы, они подставляются в параметрыб то есть в items
+// logItems([1, 2, 3, 4, 5]);
+// logItems(["clock", "pen", "chair"]);
 
-// напиши функцию calculateTotalPrice котора я принимает массив чисел(items) и возвращает их сумму
-const calculateTotalPrice = function (items) {
-  console.log(items);
-  let total = 0;
-  for (const item of items) {
-    total += item;
-  }
-  return total;
-};
+// // напиши функцию calculateTotalPrice котора я принимает массив чисел(items) и возвращает их сумму
+// const calculateTotalPrice = function (items) {
+//   console.log(items);
+//   let total = 0;
+//   for (const item of items) {
+//     total += item;
+//   }
+//   return total;
+// };
 // интерпретотор видит return и возвращает его значение на место calculateTotalPrice([])
-console.log(calculateTotalPrice([1, 2, 3])); //это вызов функции, в него происходит return
-console.log(calculateTotalPrice([5, 10, 20, 30]));
-console.log(calculateTotalPrice([100, 200, 300]));
+// console.log(calculateTotalPrice([1, 2, 3])); //это вызов функции, в него происходит return
+// console.log(calculateTotalPrice([5, 10, 20, 30]));
+// console.log(calculateTotalPrice([100, 200, 300]));
 // const add = function () {
 //   console.log("выполнение тела функции");
 // };
