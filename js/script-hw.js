@@ -1,5 +1,96 @@
 "use strict";
 
+const hotel = {
+  name: "Sunset",
+  stars: 5,
+  capacity: 100,
+};
+
+console.log("hotel:", hotel);
+
+const countTotalSalary = function (employees) {
+  "use strict";
+  // Write code under this line
+  const salaries = Object.values(employees);
+
+  let totalSalary = 0;
+  for (const salary of salaries) {
+    totalSalary += salary;
+  }
+  return totalSalary;
+};
+
+// Объекты и ожидаемый результат
+const developers = {
+  mango: 300,
+  poly: 250,
+  alfred: 450,
+};
+console.log(countTotalSalary(developers));
+// 1000
+
+const supports = {
+  kiwi: 200,
+  lux: 150,
+  chelsy: 150,
+};
+console.log(countTotalSalary(supports));
+// 500
+
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// const keys = Object.keys(hotel); // ["name", "stars", "capacity"]
+// const values = Object.values(hotel); // ["Resort Hotel", 5, 100]
+// const entries = Object.entries(hotel); // [Array(2), Array(2), Array(2)]
+// console.log(keys);
+// console.log(values);
+// console.log(entries);
+// console.log();
+
+// const houses = ["Arryn", "Frey", "Greyjoy", "Stark", "Lannister", "Tyrell"];
+
+// // Вертикальная запись удобнее для чтения
+// const updatedHouses = [
+//   ...houses.slice(0, 1),
+//   "Frey of the Crossing",
+//   ...houses.slice(2),
+// ];
+
+// console.log(updatedHouses);
+// // ['Arryn', 'Frey of the Crossing', 'Greyjoy', 'Stark', 'Lannister', 'Tyrell']
+
+// const add = function (value, ...args) {
+//   console.log(value); // первый аргумент
+//   console.log(args); // массив всех остальных аргументов
+// };
+
+// add(10, 1, 2, 3);
+// add(15, 1, 2, 3, 4, 5);
+
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// Перебор ключей объекта hotel
+// for (const key in hotel) {
+//   console.log("Key: ", key);
+// }
+// for (const key in hotel) {
+//   console.log("Value: ", hotel[key]);
+// }
+
+/*
+ * Key: name
+ * Key: stars
+ * Key: capacity
+ */
+
 // function isLoginValid(login, min = 4, max = 16) {
 //   // Write code under this line
 //   const loginValid = login.length >= min && login.length <= max;
