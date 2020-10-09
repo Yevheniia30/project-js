@@ -1,52 +1,46 @@
 "use strict";
 // дальше идет весь код файла
 
-// 1. перезаписать переменную countryName чтобы первая буква была заглавной, а остальные строчные
+var myNoun = "dog";
+var myAdjective = "big";
+var myVerb = "ran";
+var myAdverb = "quickly";
 
-// 2. используя switch прописать message
+// Only change code below this line
+var wordBlanks = myNoun + " " + myAdjective + " " + myVerb + " " + myAdverb;
+console.log(wordBlanks); // Change this line
+// Only change code above this line
 
-// const countryName = "индиЯ";
-
-// const CANCELED_BY_USER = "Отменено пользователем!";
-// const NO_DELIVERY = "В выбранную страну доставка недоступна.";
-// const CHINA = "Китай";
-// const AUSTRALIA = "Австралия";
-// const INDIA = "Индия";
-// const JAMAICA = "Ямайка";
-// let message;
-// let price = 0;
-// let country;
-// if (countryName === null) {
-//   message = CANCELED_BY_USER;
-// } else {
-//   country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code on this line
-//   switch (country) {
-//     case CHINA:
-//       price = 100;
-//       break;
-//     case AUSTRALIA:
-//       price = 170;
-//       break;
-//     case INDIA:
-//       price = 80;
-//       break;
-//     case JAMAICA:
-//       price = 120;
-//       break;
-//     default:
-//       message = NO_DELIVERY;
+// function getAllPropValues(array, prop) {
+//   "use strict";
+//   // Write code under this line
+//   let arrayOfValues = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (prop in array[i]) {
+//       arrayOfValues.push(array[i][prop]);
+//     }
 //   }
+//   return arrayOfValues;
 // }
-// // console.log(price);
 
-// if (price > 0) {
-//   //   // Write code on this line
-//   message = `Доставка в ${country} будет стоить ${price} кредитов`;
-// }
-// console.log(message);
-// document.getElementById("title");
-// console.log(document.getElementById("title"));
-// console.log(typeof document.getElementById("title"));
+// // Объекты и ожидаемый результат
+// const products = [
+//   { name: "Радар", price: 1300, quantity: 4 },
+//   { name: "Радар", price: 1280, quantity: 2 },
+//   { name: "Радар", price: 1320, quantity: 1 },
+//   { name: "Сканер", price: 2700, quantity: 1 },
+//   { name: "Сканер", price: 2500, quantity: 3 },
+//   { name: "Дроид", price: 400, quantity: 7 },
+//   { name: "Захват", price: 1200, quantity: 2 },
+// ];
+// console.log(getAllPropValues(products, "name"));
+// // ['Радар', 'Радар', 'Радар', 'Сканер', 'Сканер', 'Дроид', 'Захват']
+
+// console.log(getAllPropValues(products, "quantity"));
+// // [4, 2, 1, 1, 3, 7, 2]
+
+// console.log(getAllPropValues(products, "category"));
+//  []
 
 // class Hater {
 //   constructor(firstName, lastName) {

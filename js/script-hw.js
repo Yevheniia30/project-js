@@ -1,42 +1,161 @@
 "use strict";
 
-const hotel = {
-  name: "Sunset",
-  stars: 5,
-  capacity: 100,
+//пример
+const phone = {
+  model: "qweasd",
+  battery: 100,
+  isOn: false,
+  // ппишем функцию включающую телефон
+  turnOn() {
+    this.isOn = true;
+  },
+  // функция снижения заряда в зависимости от длительности работы
+  work(time) {
+    // условие чтобі заряд не был меньше 0
+    if (this.battery - time < 0) {
+      this.battery = 0;
+    } else {
+      this.battery -= time;
+    }
+  },
 };
+console.log(phone);
+phone.turnOn();
+console.log(phone);
+// 80 - аргумент ф-ции work присваевается параметру time
+phone.work(80);
+console.log(phone);
+phone.work(80);
+console.log(phone);
 
-console.log("hotel:", hotel);
+// МЕТОДЫ ОБЪЕКТА
+// const man = {
+//   name: "Bobby",
+//   age: 40,
+//   salary: 1000,
+//   // пишем функцию внутри объекта
+//   work: function () {
+//     console.log("I'm working");
+//   },
+//   // или
+//   walk() {
+//     console.log("I'm walking");
+//   },
+//   // пишем функцию в которой обращаемся к свойству age через this
+//   birthdayHappened() {
+//     this.age += 1;
+//   },
+//   // пишем функцию в которой обращаемся к свойству name через this
+//   addSecondName() {
+//     this.name += " Jack";
+//   },
+//   changeName() {
+//     this.name = "Charlie";
+//   },
+//   sayHello() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   },
+// };
+// // вызываем функции work b walk
+// man.work();
+// man.walk();
 
-const countTotalSalary = function (employees) {
-  "use strict";
-  // Write code under this line
-  const salaries = Object.values(employees);
+// // ДОСТУП К ОБЪЕКТУ ЧЕРЕЗ THIS
+// console.log(man); //видим возраст 40
+// // вызываем функцию birthdayHappened
+// man.birthdayHappened();
+// console.log(man); //видим возраст 41
+// // вызвали функцию еще раз и видим возраст 42
+// man.birthdayHappened();
+// console.log(man);
+// // вызываем функцию которая добавляет к имени второе имя
+// man.addSecondName();
+// console.log(man);
+// // вызываем функцию которая меняет имя
+// man.changeName();
+// console.log(man);
+// // вызываем функцию sayHello
+// man.sayHello();
+// // изменим имя обратно и опять візовем sayHello
+// man.name = "Bobby";
+// man.sayHello();
 
-  let totalSalary = 0;
-  for (const salary of salaries) {
-    totalSalary += salary;
-  }
-  return totalSalary;
-};
+// // ПЕРЕБОР ключей объекта циклом for in
+// // посчитаем сумму всех числовых значений ключей объекта
+// let sum = 0;
+// for (const key in man) {
+//   console.log("Ключ:", key);
+//   const value = man[key];
 
-// Объекты и ожидаемый результат
-const developers = {
-  mango: 300,
-  poly: 250,
-  alfred: 450,
-};
-console.log(countTotalSalary(developers));
-// 1000
+//   if (typeof value === "number") {
+//     sum += value;
+//   }
+// }
 
-const supports = {
-  kiwi: 200,
-  lux: 150,
-  chelsy: 150,
-};
-console.log(countTotalSalary(supports));
-// 500
+// // то же самое через for of
+// // const arrayValues = Object.values(man);
+// // console.log(arrayValues);
+// // let sum = 0;
+// // for (const value of arrayValues) {
+// //   console.log(value);
+// //   if (typeof value === "number") {
+// //     sum += value;
+// //   }
+// // }
+// console.log("Сумма:", sum);
+// const users = {
+//   name: "Alex",
+//   eyes: "blue",
+//   age: 25,
+//   legs: ["left", "right"],
+//   hands: ["left", "right"],
+//   hair: false,
+//   pets: {
+//     cats: [],
+//     dogs: [],
+//   },
+// };
+// //   {
+// //     name: "Jane",
+// //     eyes: "green",
+// //     age: 30,
+// //     legs: ["left", "right"],
+// //     hands: ["left", "right"],
+// //     hair: true,
+// //     pets: {
+// //       cats: [],
+// //       dogs: [],
+// //     },
+// //   },
+// // ];
+// // console.log(users);
+// // console.log(users[0]);
+// // console.log(users[1]);
 
+// // чтобы вывести список определенных значений (напр.имен) объектов массива
+// // перебираем массив
+// // for (let i = 0; i < users.length; i += 1) {
+// // сщздаем переменную для каждого объекта массива
+// // const user = users[i];
+// //выводим значения в формате (имя объекта.свойство) одно или несколько через запятую
+// // console.log(user.name, user.age, user.eyes);
+// // }
+
+// // вычисляемые свойства
+// // пишем функцию. куда передаем кота и возвращаем значение определенного поля
+// const getValue = function (obj, key) {
+//   // возвращаем значение ключа обїекта
+//   return obj[key];
+// };
+// const cat = {
+//   name: "Manu",
+//   age: 10,
+// };
+// // передаем а парметры функции аргументы в параметр key передаем значения ключей
+// console.log(getValue(cat, "age")); // 10
+// console.log(getValue(cat, "name")); // Manu
+// console.log(getValue(cat, "eyes")); // undefined
+// console.log(getValue(users, "hands")); // left right
 // const hotel = {
 //   name: "Resort Hotel",
 //   stars: 5,
