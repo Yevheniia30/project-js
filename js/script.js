@@ -1,47 +1,39 @@
 "use strict";
 // дальше идет весь код файла
 
-var myNoun = "dog";
-var myAdjective = "big";
-var myVerb = "ran";
-var myAdverb = "quickly";
+function nextInLine(arr, item) {
+  // Only change code below this line
+  arr.push(item);
+  return arr.shift();
+  // Only change code above this line
+  
 
-// Only change code below this line
-var wordBlanks = myNoun + " " + myAdjective + " " + myVerb + " " + myAdverb;
-console.log(wordBlanks); // Change this line
-// Only change code above this line
+}
 
-// function getAllPropValues(array, prop) {
-//   "use strict";
-//   // Write code under this line
-//   let arrayOfValues = [];
-//   for (let i = 0; i < array.length; i += 1) {
-//     if (prop in array[i]) {
-//       arrayOfValues.push(array[i][prop]);
-//     }
-//   }
-//   return arrayOfValues;
-// }
+// Setup
+var testArr = [1,2,3,4,5];
 
-// // Объекты и ожидаемый результат
-// const products = [
-//   { name: "Радар", price: 1300, quantity: 4 },
-//   { name: "Радар", price: 1280, quantity: 2 },
-//   { name: "Радар", price: 1320, quantity: 1 },
-//   { name: "Сканер", price: 2700, quantity: 1 },
-//   { name: "Сканер", price: 2500, quantity: 3 },
-//   { name: "Дроид", price: 400, quantity: 7 },
-//   { name: "Захват", price: 1200, quantity: 2 },
-// ];
-// console.log(getAllPropValues(products, "name"));
-// // ['Радар', 'Радар', 'Радар', 'Сканер', 'Сканер', 'Дроид', 'Захват']
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
 
-// console.log(getAllPropValues(products, "quantity"));
-// // [4, 2, 1, 1, 3, 7, 2]
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
 
-// console.log(getAllPropValues(products, "category"));
-//  []
 
+    console.log(abTest);
+  // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
+
+
+
+//
 // class Hater {
 //   constructor(firstName, lastName) {
 //     this.firstName = firstName;

@@ -1,32 +1,102 @@
 "use strict";
+//  ЗАДАЧА
+const schedule = {
+  items: [],
+  log: [],
 
-//пример
-const phone = {
-  model: "qweasd",
-  battery: 100,
-  isOn: false,
-  // ппишем функцию включающую телефон
-  turnOn() {
-    this.isOn = true;
+  // пишем функцию которая добавляет задание
+  addItem(text) {
+
   },
-  // функция снижения заряда в зависимости от длительности работы
-  work(time) {
-    // условие чтобі заряд не был меньше 0
-    if (this.battery - time < 0) {
-      this.battery = 0;
-    } else {
-      this.battery -= time;
-    }
+// ф-ция которая отмечает действие выполненным
+  markDone(id) {
+    
   },
-};
-console.log(phone);
-phone.turnOn();
-console.log(phone);
-// 80 - аргумент ф-ции work присваевается параметру time
-phone.work(80);
-console.log(phone);
-phone.work(80);
-console.log(phone);
+  
+
+}
+// вызываем ф-цци
+schedule.addItem('Buy bread');
+schedule.addItem('Buy potato');
+
+schedule.markDone();
+
+
+
+// деструктуризация массивов
+const arr = [5, 3, 2];
+
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+const [a, b, c] = arr;
+
+console.log(arr);
+console.log(a, b, c);
+
+
+
+
+// ДЕСТРУКТУРИЗАЦИЯ ОБЪЕКТОВ
+// const obj1 = {
+//   name: 'Alex',
+//   age: 25
+// };
+// const obj2 = {
+//   name: 'Manu',
+//   age:10
+// }
+// const obj3 = {
+//   name: 'Bob',
+//   age:8
+// }
+
+// function sayHello(human, pet = {}) {
+//   const { name, age } = human;
+//   const { name: petName='NotFound', age: petAge=0 } = pet;
+
+//   console.log(`Hello my name is ${name}, I'm ${age} years old!`);
+//   // console.log(`My best friend is ${cat.name}, he is ${cat.age} years old.`);
+//   console.log(`My best friend is ${petName}, he is ${petAge} years old.`);
+// }
+
+// sayHello(obj1, obj2);
+// sayHello(obj1);
+
+// const lastWeek = [2, 5, 10, 11];
+// const currentWeek = [12, 50, 1, 14];
+// const nextWeek = [20, 52, 100, 110];
+
+// const all = [...lastWeek, 'hello', ...currentWeek, 'world', ...nextWeek];
+// console.log(all);
+
+// //пример
+// const phone = {
+//   model: "qweasd",
+//   battery: 100,
+//   isOn: false,
+//   // ппишем функцию включающую телефон
+//   turnOn() {
+//     this.isOn = true;
+//   },
+//   // функция снижения заряда в зависимости от длительности работы
+//   work(time) {
+//     // условие чтобі заряд не был меньше 0
+//     if (this.battery - time < 0) {
+//       this.battery = 0;
+//     } else {
+//       this.battery -= time;
+//     }
+//   },
+// };
+// console.log(phone);
+// phone.turnOn();
+// console.log(phone);
+// // 80 - аргумент ф-ции work присваевается параметру time
+// phone.work(80);
+// console.log(phone);
+// phone.work(80);
+// console.log(phone);
 
 // МЕТОДЫ ОБЪЕКТА
 // const man = {
