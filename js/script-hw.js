@@ -1,4 +1,6 @@
 "use strict";
+
+
 //  ЗАДАЧА
 const schedule = {
   items: [],
