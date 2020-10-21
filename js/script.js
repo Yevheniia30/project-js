@@ -1,36 +1,19 @@
-"use strict";
-// дальше идет весь код файла
 
-function nextInLine(arr, item) {
-  // Only change code below this line
-  arr.push(item);
-  return arr.shift();
-  // Only change code above this line
+// function phoneticLookup(val) {
+//   var result = "";
+
+//   var lookup = {
+//     alpha: 'Adams',
+//     bravo: 'Boston',
+//     charlie: 'Chicago',
+//     delta: 'Denver',
+//     echo: 'Easy',
+//     foxtrot: 'Frank'
+//   }
+
   
-
-}
-
-// Setup
-var testArr = [1,2,3,4,5];
-
-// Display code
-console.log("Before: " + JSON.stringify(testArr));
-console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr));
-
-// Setup
-function abTest(a, b) {
-  // Only change code below this line
-
-
-    console.log(abTest);
-  // Only change code above this line
-
-  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
-}
-
-abTest(2,2);
-
+//   return result;
+// }
 
 
 //
