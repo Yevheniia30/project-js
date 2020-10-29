@@ -1,29 +1,58 @@
-const numbers = [1, 2, 3, 4, 5];
-
-const summ = numbers.reduce((acc, value) => acc + value, 0);
-
-console.log(summ); // 15
-
-const tweets = [
-  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-  { id: '001', likes: 2, tags: ['html', 'css'] },
-  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-  { id: '003', likes: 8, tags: ['css', 'react'] },
-  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+const users = [
+  { name: 'Mango', daysActive: 15 },
+  { name: 'Poly', daysActive: 4 },
+  { name: 'Ajax', daysActive: 27 },
+  { name: 'Chelsey', daysActive: 2 },
 ];
 
-// Пройдем по всем элементам коллекции и прибавим значения свойства likes
-// к аккумулятору, начальное значаение которого укажем 0.
-const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+const sortByActiveDays = (a, b) => a.daysActive - b.daysActive;
 
-console.log(likes); // 32
+console.log(users.sort(sortByActiveDays));
 
-// Наверное подсчет лайков не одиночная операция, поэтому напишем функцию
-// для подсчета лайков из коллекции
-const countLikes = tweets =>
-  tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-console.log(countLikes(tweets)); // 32
+/*
+ * Фильтруем четные числа. Далее, на результате метода filter,
+ * вызываем map и множим на 2. После чего на результате
+ * метода map вызываем reverse.
+ */
+
+const result = numbers
+  .filter(x => x % 2 === 0)
+  .map(y => y * 2)
+  .reverse();
+
+console.log(result);
+
+
+
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const summ = numbers.reduce((acc, value) => acc + value, 0);
+
+// console.log(summ); // 15
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // Пройдем по всем элементам коллекции и прибавим значения свойства likes
+// // к аккумулятору, начальное значаение которого укажем 0.
+// const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(likes); // 32
+
+// // Наверное подсчет лайков не одиночная операция, поэтому напишем функцию
+// // для подсчета лайков из коллекции
+// const countLikes = tweets =>
+//   tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(countLikes(tweets)); // 32
 
 
 
