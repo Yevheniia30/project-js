@@ -1,15 +1,15 @@
-const users = [
-  { name: 'Mango', daysActive: 15 },
-  { name: 'Poly', daysActive: 4 },
-  { name: 'Ajax', daysActive: 27 },
-  { name: 'Chelsey', daysActive: 2 },
-];
+// const users = [
+//   { name: 'Mango', daysActive: 15 },
+//   { name: 'Poly', daysActive: 4 },
+//   { name: 'Ajax', daysActive: 27 },
+//   { name: 'Chelsey', daysActive: 2 },
+// ];
 
-const sortByActiveDays = (a, b) => a.daysActive - b.daysActive;
+// const sortByActiveDays = (a, b) => a.daysActive - b.daysActive;
 
-console.log(users.sort(sortByActiveDays));
+// console.log(users.sort(sortByActiveDays));
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
 /*
  * Фильтруем четные числа. Далее, на результате метода filter,
@@ -17,18 +17,18 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
  * метода map вызываем reverse.
  */
 
-const result = numbers
-  .filter(x => x % 2 === 0)
-  .map(y => y * 2)
-  .reverse();
+// const result = numbers
+//   .filter(x => x % 2 === 0)
+//   .map(y => y * 2)
+//   .reverse();
 
-console.log(result);
+// console.log(result);
 
-const max = 10;
+// const max = 10;
 
-for (let i = 0; i < max; i += 1) {
-  console.log(`${max} % ${i} = `, max % i);
-}
+// for (let i = 0; i < max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
 
 
 
