@@ -1,3 +1,9 @@
+const letters = ['s', 'b', 'c', 'k', 'h', 'i'];
+const copy = [...letters].sort();
+console.log(letters);
+console.log(copy);
+
+
 // const users = [
 //   { name: 'Mango', daysActive: 15 },
 //   { name: 'Poly', daysActive: 4 },
