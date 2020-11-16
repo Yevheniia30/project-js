@@ -1,26 +1,30 @@
-const titleEl = document.querySelector('.main-title');
-console.dir(titleEl);
-console.log(titleEl.classList);
-
-titleEl.textContent = 'Hello world!';
-titleEl.style.color = 'tomato';
-titleEl.style.fontSize = '40px';
+// DOM
+// СОБЫТИЯ
 
 
-const listEl = document.querySelector('.main-list-item');
-console.log(listEl);
-console.log(listEl.classList);
+// const titleEl = document.querySelector('.main-title');
+// console.dir(titleEl);
+// console.log(titleEl.classList);
+
+// titleEl.textContent = 'Hello world!';
+// titleEl.style.color = 'tomato';
+// titleEl.style.fontSize = '40px';
 
 
-const subTitleEl = document.querySelector('.sub-title');
-console.log(subTitleEl);
-console.log(subTitleEl.classList)
+// const listEl = document.querySelector('.main-list-item');
+// console.log(listEl);
+// console.log(listEl.classList);
 
-const imageEl = document.querySelector('.image');
-console.dir(imageEl);
 
-imageEl.alt = "It's me";
-imageEl.src='https://cdn.pixabay.com/photo/2013/05/30/18/21/cat-114782_960_720.jpg'
+// const subTitleEl = document.querySelector('.sub-title');
+// console.log(subTitleEl);
+// console.log(subTitleEl.classList)
+
+// const imageEl = document.querySelector('.image');
+// console.dir(imageEl);
+
+// imageEl.alt = "It's me";
+// imageEl.src='https://cdn.pixabay.com/photo/2013/05/30/18/21/cat-114782_960_720.jpg'
 
 
 // const heading = document.createElement('h1');
