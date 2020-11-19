@@ -1,4 +1,16 @@
 body {
   background-color: antiquewhite;
 }
+
+.btn.active {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.js-nav {
+  background-color: lightcoral;
+  padding: 10px;
+  width: 600px;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
