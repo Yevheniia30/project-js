@@ -64,15 +64,22 @@
 
     <!-- ПРИМЕР 1 -->
 
-    <ul class="js-nav">
+    <!-- <ul class="js-nav">
       <button class="btn">HTML</button>
       <button class="btn">CSS</button>
       <button class="btn">JS</button>
       <button class="btn">REACT</button>
       <button class="btn">NODEJS</button>
-    </ul>
+    </ul> -->
 
-    <!-- <li class="gallery__item">
+    <!-- ПРИМЕР 2 -->
+    <!-- событие mousemove -->
+    <!-- <p class="js-coords"></p> -->
+    <!-- событие input -->
+    <!-- <input type="text" class="js-input" /> -->
+    <!-- <p class="js-output"></p> -->
+
+    <li class="gallery__item">
       <a
         class="gallery__link"
         href="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
@@ -84,9 +91,26 @@
           alt="Tulips"
         />
       </a>
-    </li> -->
-    <!-- <div class="users js-users"></div> -->
+    </li>
 
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay"></div>
+
+      <div class="lightbox__content">
+        <img class="lightbox__image" src="" alt="" />
+      </div>
+
+      <button
+        type="button"
+        class="lightbox__button"
+        data-action="close-lightbox"
+      ></button>
+    </div>
+
+    <script src="./js/modal.js" type="module"></script>
+    <!-- <div class="users js-users"></div> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script> -->
     <!-- <script src="./js/script.js" type="module"></script> -->
     <!-- <script src="./js/script-practice.js" type="module"></script>  -->
     <!-- <script src="./js/examples-for-interview.js" type="module"></script> -->
@@ -94,6 +118,6 @@
     <!-- <script src="./js/module-05.js" type="module"></script> -->
     <!-- <script src="./js/module-06.js" type="module"></script> -->
     <!-- <script src="./js/module-07.js" type="module"></script> -->
-    <script src="./js/module-08.js" type="module"></script>
+    <!-- <script src="./js/module-08.js" type="module"></script> -->
   </body>
 </html>
