@@ -1,2 +1,2 @@
-const message = "nodeJS is amazing";
-console.log(message);
+// const message = "nodeJS is amazing";
+// console.log(message);
